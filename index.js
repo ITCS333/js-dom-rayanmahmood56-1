@@ -1,21 +1,36 @@
 function changeHeadingText() {
-  document.getElementById("main-heading").textContent = "DOM Manipulation Challenge";
+  const heading = document.getElementById("main-heading");
+  if (heading) {
+    heading.textContent = "DOM Manipulation Challenge";
+  }
 }
 
 function changeBoxColor() {
-  document.getElementById("box-to-modify").style.backgroundColor = "lightblue";
+  const box = document.getElementById("box-to-modify");
+  if (box) {
+    box.style.backgroundColor = "lightblue";
+  }
 }
 
 function addNewItem() {
-  const li = document.createElement("li");
-  li.textContent = "New Item";
-  document.getElementById("item-list").appendChild(li);
+  const list = document.getElementById("item-list");
+  if (list) {
+    const li = document.createElement("li");
+    li.textContent = "New Item";
+    list.appendChild(li);
+  }
 }
 
 function highlightParagraph() {
-  document.querySelector(".content-para").classList.add("highlight");
+  const para = document.querySelector(".content-para");
+  if (para) {
+    para.classList.add("highlight");
+  }
 }
 
 function removeElement() {
-  document.getElementById("to-be-removed").remove();
+  const element = document.getElementById("to-be-removed");
+  if (element) {
+    element.remove();
+  }
 }
